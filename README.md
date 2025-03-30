@@ -154,8 +154,17 @@ Build the Static Collection of Web app
 pnpm build
 ```
 
-## Prerequisites-Setup
+## Prerequisites-Setup ✨
 hii
+
+## Resources 📚
+- [Nodejs Docs](https://nodejs.org/en)
+- [Tailwind Docs](https://tailwindcss.com/docs/installation/using-vite)
+- [Nextjs Docs](https://nextjs.org/docs)
+- [Anchor Docs](https://www.anchor-lang.com/docs/installation)
+- [Solana Docs](https://solana.com/docs/intro/installation)
+- [Rust Docs](https://doc.rust-lang.org/stable/)
+- [Blockchain API Docs](https://exchange.blockchain.com/api/#introduction)
 
 ## Author ✍️
 - [@Ujjwal Saini](https://github.com/UjjwalSaini07)
@@ -166,3 +175,9 @@ hii
 If you have any feedback, please reach out to us at:
 - Provide your feedback on this [Mail](ujjwalsaini0007+FundHive@gmail.com)
 - Raising the [Issues](https://github.com/UjjwalSaini07/Fund-Hive/issues)
+
+<div align="center">
+    <a href="#top">
+        <img src="https://img.shields.io/badge/Back%20to%20Top-000000?style=for-the-badge&logo=github&logoColor=white" alt="Back to Top">
+    </a>
+</div>
