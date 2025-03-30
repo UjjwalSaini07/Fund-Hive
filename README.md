@@ -168,7 +168,7 @@ pnpm build
 ```
 
 ## Architecture Diagram
-![Fund-Hive_Architecture](https://github.com/user-attachments/assets/21ee1013-da95-4fbe-8c61-b2a92d31e8cd)
+![Fund-Hive_Architecture](https://github.com/user-attachments/assets/11275c04-d52a-45d4-8e08-6bdb4a9cfb11)
 
 ## Prerequisites-Setup
 
