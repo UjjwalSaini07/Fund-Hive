@@ -55,7 +55,7 @@ You can visit the live site here: **(-Temporarily Disable-)**
 
 ![image](https://github.com/user-attachments/assets/f1eb5aea-ae41-4a04-9cf8-0d01f3487e78)
 
-- [Full Setup of Prerequisites](#Prerequisites-Setup)
+- [Full Setup of Prerequisites](#Prerequisites-Setup✨)
 
 ## Installation 🛠️
 - First Read this [License](https://github.com/UjjwalSaini07/Fund-Hive/blob/main/LICENSE) & their terms then proceed.
@@ -154,7 +154,7 @@ Build the Static Collection of Web app
 pnpm build
 ```
 
-## Prerequisites-Setup ✨
+## Prerequisites-Setup✨
 hii
 
 ## Resources 📚
