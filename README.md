@@ -205,6 +205,181 @@ wsl --install
 
 </details>
 
+- If you use VS Code, the WSL extension enables you to use WSL and VS Code together.
+<details>	
+ <summary><b>Image Reference</b></summary><br>
+    
+![image](https://github.com/user-attachments/assets/56d95d4f-bf7b-4d45-8c6e-168e5fc6c72e)
+![image](https://github.com/user-attachments/assets/fe19d92f-526b-4cda-9808-31b27ca13e6b)
+
+</details>
+
+## Now Install Rust, Solana & Anchor CLI (Window-WSL(Ubuntu) / Unix / Linux)
+### Install Rust
+
+Developers build Solana programs using the Rust programming language.
+```bash
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+```
+Run the following command to reload your PATH environment variable to include Cargo's bin directory:
+```bash
+. "$HOME/.cargo/env"
+```
+To verify the installation succeeded, check the Rust version:
+```bash
+rustc --version
+```
+You should see output like the following:
+```shell
+rustc 1.84.1 (e71f9a9a9 2025-01-27)
+```
+
+### Install Solana CLI
+The Solana CLI provides all the tools required to build and deploy Solana programs.
+```bash
+sh -c "$(curl -sSfL https://release.anza.xyz/stable/install)"
+```
+For a first-time installation of the Solana CLI, you may see the following message prompting you to add a PATH environment variable
+```bash
+Close and reopen your terminal to apply the PATH changes or run the following in your existing shell:
+
+export PATH="/Users/test/.local/share/solana/install/active_release/bin:$PATH"
+```
+
+Now Reopen the Terminal after Seting Up the Path variables
+
+```bash
+echo $SHELL
+```
+- If the output contains /bash, use .bashrc.
+- If the output contains /zsh, use .zshrc.
+
+Depending on your shell, run the appropriate command.
+- For Bash (bashrc):
+```bash
+echo 'export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.bashrc
+```
+- For Zsh (zshrc):
+```bash
+echo 'export PATH="$HOME/.local/share/solana/install/active_release/bin:$PATH"' >> ~/.zshrc
+```
+
+Then run the following command to refresh the terminal session or restart your terminal.
+```bash
+source ~/.bashrc # If using Bash
+```
+```bash
+source ~/.zshrc # If using Zsh
+```
+
+To verify that the installation succeeded, check the Solana CLI version:
+```bash
+solana --version
+```
+You should see output like the following:
+```shell
+solana-cli 2.0.26 (src:3dccb3e7; feat:607245837, client:Agave)
+```
+
+Later update the Solana CLI to the latest version
+```bash
+agave-install update
+```
+
+### Install Anchor CLI
+Anchor is a framework for developing Solana programs. The Anchor framework leverages Rust macros to simplify the process of writing Solana programs.
+The Anchor version manager (AVM) allows you to install and manage different Anchor versions on your system and easily update Anchor versions in the future.
+- Install AVM with the following command:
+```bash
+cargo install --git https://github.com/coral-xyz/anchor avm --force
+```
+- Confirm that AVM installed successfully:
+```bash
+avm --version
+```
+- Install the latest version of Anchor CLI using AVM:
+```bash
+avm install latest
+```
+```bash
+avm use latest
+```
+- You can install a specific version of Anchor CLI by specifying the version number:
+```bash
+avm install 0.30.1
+avm use 0.30.1
+```
+
+To verify that the installation succeeded, check the Anchor CLI version:
+```bash
+anchor --version
+```
+You should see output like the following:
+```shell
+anchor-cli 0.30.1
+```
+
+> [!Warning]  
+> When installing the Anchor CLI on Linux or WSL, you may encounter this error:
+> 
+> error: could not exec the linker cc = note: Permission denied (os error 13)
+
+If you see this error message:
+
+- Install the dependencies listed in the Linux section (WSL Properly).
+- Retry installing the Anchor CLI.
+
+### Installing Node.js and Yarn on Linux Setup
+Install nvm using the following command:
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
+```
+Restart your terminal and confirm that the nvm command runs successfully:
+```bash
+command -v nvm
+```
+Next, use nvm to install node:
+```bash
+nvm install node
+```
+To verify that the installation succeeded, check the Node version:
+```bash
+node --version
+```
+You should see output like the following: v23.7.0
+
+> [!Warning]  
+> The error indicates that the npm install command is encountering a permission issue
+
+1.  Check Permissions of the node_modules Directory
+- Run the following to check the ownership of the node_modules directory:
+```bash
+ls -ld node_modules
+```
+- If the directory is owned by another user or has restricted permissions, update the ownership to your user:
+```bash
+sudo chown -R $(whoami) node_modules
+```
+
+2. Clear node_modules and Reinstall
+- Sometimes, issues occur due to incomplete or corrupted installations. Remove the node_modules directory and reinstall dependencies:
+```bash
+rm -rf node_modules
+pnpm install
+```
+3. Avoid Using sudo with npm
+- Using sudo with npm/pnpm can cause permission problems. Ensure that your npm/pnpm and Node.js setup doesn’t require elevated privileges.
+- Reset the pnpm permissions:
+```bash
+sudo chown -R $(whoami) ~/.npm
+```
+4. Try Installing in a Clean Environment
+- If the problem persists, try removing both the node_modules folder and the package-lock.json file, then reinstall:
+```bash
+rm -rf node_modules package-lock.json
+npm install
+```
+
 ## Resources 📚
 - [Nodejs Docs](https://nodejs.org/en)
 - [Tailwind Docs](https://tailwindcss.com/docs/installation/using-vite)
