@@ -167,6 +167,9 @@ Build the Static Collection of Web app
 pnpm build
 ```
 
+## Architecture Diagram
+![Fund-Hive_Architecture](https://github.com/user-attachments/assets/21ee1013-da95-4fbe-8c61-b2a92d31e8cd)
+
 ## Prerequisites-Setup
 
 ### Mac and Linux
