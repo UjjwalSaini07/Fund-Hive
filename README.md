@@ -379,6 +379,101 @@ sudo chown -R $(whoami) ~/.npm
 rm -rf node_modules package-lock.json
 npm install
 ```
+> Installation of pnpm over npm
+- Install pnpm
+```bash
+npm install -g pnpm
+```
+- Verify the installation:
+```bash
+pnpm --version
+```
+- Migrate Dependencies
+
+Option A: Use pnpm import
+- pnpm has a built-in command to migrate your existing package-lock.json or npm-shrinkwrap.json:
+```bash
+pnpm import
+```
+This command converts the lock file into pnpm-lock.yaml while keeping the dependencies consistent.
+
+Option B: Remove node_modules and Reinstall
+- Delete the existing node_modules directory and package-lock.json:
+```bash
+rm -rf node_modules package-lock.json
+```
+- Install dependencies using pnpm:
+```bash
+pnpm install
+```
+This will create a pnpm-lock.yaml and organize dependencies in a more efficient structure.
+
+## Solana CLI Basics (Wallet Connect)
+### Solana Config
+```bash
+solana config get
+```
+You should see output like the following:
+![image](https://github.com/user-attachments/assets/4e08ea79-a099-43b9-b957-62d6f53cf8d7)
+
+The RPC URL and Websocket URL specify the Solana cluster the CLI makes requests to.
+```bash
+solana config set --url mainnet-beta
+```
+```bash
+solana config set --url devnet
+```
+```bash
+solana config set --url localhost
+```
+```bash
+solana config set --url testnet
+```
+The Keypair Path points to the default Solana wallet (keypair) used by the Solana CLI to pay transaction fees and deploy programs. By default, this file is stored at ~/.config/solana/id.json
+
+### Create Wallet
+- To send transactions using the Solana CLI, you need a Solana wallet funded with SOL.
+```bash
+solana-keygen new
+```
+- You should see output like the following:
+```bash
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none):
+
+Wrote new keypair to /Users/test/.config/solana/id.json
+===========================================================================
+pubkey: 8dBTPrjnkXyuQK3KDt9wrZBfizEZijmmUQXVHpFbVwGT
+===========================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+cream bleak tortoise ocean nasty game gift forget fancy salon mimic amazing
+===========================================================================
+```
+- To view your wallet's address (public key), run:
+```bash
+solana address
+```
+
+### Airdrop SOL
+Request an airdrop of SOL to your wallet to pay for transactions and program deployments.
+- Set your cluster to the devnet:
+```bash
+solana config set -ud
+```
+- Then request an airdrop of devnet SOL:
+```bash
+solana airdrop 2
+```
+- To check your wallet's SOL balance, run the following command:
+```bash
+solana balance
+```
 
 ## Resources 📚
 - [Nodejs Docs](https://nodejs.org/en)
