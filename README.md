@@ -44,7 +44,7 @@ You can visit the live site here: **(-Temporarily Disable-)**
 - Anchor: Framework for writing Solana smart contracts in Rust.
 - Solana: High-speed blockchain for decentralized applications.
 
-## Getting Started
+## Getting Started ⚙️
 ### Prerequisites
 
 - Node v22.14.0 or higher
@@ -83,9 +83,9 @@ npm install
 pnpm dev
 ```
 
-## Setup Apps
+## Setup Apps 🌍
 
-### Anchor
+### **Anchor**
 
 This is a Solana smart contract developed in Rust using the Anchor framework.
 
@@ -151,3 +151,13 @@ Build the Static Collection of Web app
 ```shell
 pnpm build
 ```
+
+## Author ✍️
+- [@Ujjwal Saini](https://github.com/UjjwalSaini07)
+- [@Vansh Anand](https://github.com/vanshanand34)
+- [@Sambhav Mishra](https://github.com/SambhavMishra17)
+
+## Feedback 💬
+If you have any feedback, please reach out to us at:
+- Provide your feedback on this [Mail](ujjwalsaini0007+FundHive@gmail.com)
+- Raising the [Issues](https://github.com/UjjwalSaini07/Fund-Hive/issues)
