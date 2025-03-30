@@ -136,7 +136,7 @@ pnpm anchor-test
 pnpm anchor deploy --provider.cluster devnet
 ```
 
-## Web Configurations
+## Web Configurations ✨
 
 This is a Next.js application that utilizes the Anchor-generated client to interact seamlessly with the Solana smart contract.
 
@@ -155,7 +155,55 @@ pnpm build
 ```
 
 ## Prerequisites-Setup
-hii dfffs
+
+### Mac and Linux
+#### On Mac and Linux, run this single command to install all dependencies.
+```bash
+curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash
+```
+##### After installation, you should see output like the following:
+```bash
+Installed Versions:
+Rust: rustc 1.85.0 (4d91de4e4 2025-02-17)
+Solana CLI: solana-cli 2.1.14 (src:3ad46824; feat:3271415109, client:Agave)
+Anchor CLI: anchor-cli 0.30.1
+Node.js: v23.8.0
+Yarn: 1.22.1
+```
+
+The Anchor CLI installation requires the following dependencies.
+```bash
+sudo apt-get update
+```
+```bash
+sudo apt-get install -y \
+build-essential \
+pkg-config \
+libudev-dev llvm libclang-dev \
+protobuf-compiler libssl-dev
+```
+### Windows
+#### However, there is a different process to install this on Windows. Take a look below:
+To develop Solana programs on Windows you must use WSL (Windows subsystem for Linux). Install all other dependencies through the Linux terminal.
+```bash
+wsl --install
+```
+<details>	
+ <summary><b>Image Reference</b></summary><br>
+    
+![image](https://github.com/user-attachments/assets/4ebf1581-a190-4439-b720-f4e4ccb21a58)
+![image](https://github.com/user-attachments/assets/40538f2a-9615-4324-8ccd-6596a18c487c)
+
+</details>
+- By default, WSL installs Ubuntu. You can open a Linux terminal by searching "Ubuntu" in the Search bar.
+- The Ubuntu screen looks like this:
+
+<details>	
+ <summary><b>Image Reference</b></summary><br>
+    
+![image](https://github.com/user-attachments/assets/b8b4dd7b-4884-4d06-bdb9-9afcf3acc724)
+
+</details>
 
 ## Resources 📚
 - [Nodejs Docs](https://nodejs.org/en)
