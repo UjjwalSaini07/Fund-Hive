@@ -503,8 +503,6 @@ solana balance
 
 ## Author ✍️
 - [@Ujjwal Saini](https://github.com/UjjwalSaini07)
-- [@Vansh Anand](https://github.com/vanshanand34)
-- [@Sambhav Mishra](https://github.com/SambhavMishra17)
 
 ## Feedback 💬
 If you have any feedback, please reach out to us at:
